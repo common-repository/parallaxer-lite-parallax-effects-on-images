@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: dzslay\n"
+"POT-Creation-Date: 2014-11-13 22:06+0200\n"
+"PO-Revision-Date: 2014-11-13 22:06+0200\n"
+"Last-Translator: ZoomIt <zoomitflash@gmail.com>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-Basepath: /Applications/MAMP/htdocs/wordpress/wp-content/plugins/"
+"dzs-layouter/\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: dzs_functions.php:99
+msgid "Read More"
+msgstr ""
+
+#: dzs_functions.php:162
+msgid "read more"
+msgstr ""
+
+#: tinymce/popupframe.php:52 tinymce/popupframe.php:148
+msgid "Off"
+msgstr ""
+
+#: tinymce/popupframe.php:53 tinymce/popupframe.php:149
+msgid "On"
+msgstr ""
+
+#: tinymce/popupframe.php:139
+msgid "None"
+msgstr ""
+
+#: tinymce/popupframe.php:140
+msgid "White Box"
+msgstr ""
+
+#: tinymce/popupframe.php:141
+msgid "Zoom Icon"
+msgstr ""

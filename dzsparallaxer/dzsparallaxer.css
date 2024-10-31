@@ -1,0 +1,112 @@
+/*
+ * Author: Digital Zoom Studio
+ * Website: http://digitalzoomstudio.net/
+ * Portfolio: http://codecanyon.net/user/ZoomIt/portfolio
+ *
+ * Version: 1.30
+ *
+ */
+@-webkit-keyframes keyframes-rotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); } }
+@keyframes keyframes-rotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); } }
+.dzsparallaxer {
+  height: 300px;
+  overflow: hidden;
+  background-color: #1c1a17;
+  position: relative;
+  transition-property: height;
+  transition-duration: 0.3s;
+  -moz-transition-property: height;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-property: height;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-property: height;
+  -o-transition-duration: 0.3s;
+  -ms-transition-property: height;
+  -ms-transition-duration: 0.3s;
+  -ms-transition-timing-function: ease-out-quart;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .dzsparallaxer .dzsparallaxer--target {
+    position: relative; }
+  .dzsparallaxer .dzsparallaxer--target.position-absolute {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.dzsparallaxer.wait-readyall.dzsprx-readyall .dzsparallaxer--target {
+  opacity: 1; }
+
+.dzsparallaxer.use-loading .dzsparallaxer--target {
+  opacity: 0;
+  transition-property: opacity, visibility;
+  transition-duration: 0.7s;
+  -moz-transition-property: opacity, visibility;
+  -moz-transition-duration: 0.7s;
+  -webkit-transition-property: opacity, visibility;
+  -webkit-transition-duration: 0.7s;
+  -o-transition-property: opacity, visibility;
+  -o-transition-duration: 0.7s;
+  -ms-transition-property: opacity, visibility;
+  -ms-transition-duration: 0.7s;
+  -ms-transition-timing-function: ease-out-quart;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+.dzsparallaxer.use-loading .preloader-semicircles {
+  transition-property: all;
+  transition-duration: 0.3s;
+  -moz-transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-property: all;
+  -o-transition-duration: 0.3s;
+  -ms-transition-property: all;
+  -ms-transition-duration: 0.3s;
+  -ms-transition-timing-function: ease-out-quart;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.dzsparallaxer.use-loading.loaded .dzsparallaxer--target {
+  opacity: 1; }
+.dzsparallaxer.use-loading.loaded .preloader-semicircles {
+  transform: translate3d(0, -50px, 0);
+  opacity: 0;
+  visibility: hidden; }
+
+.dzsparallaxer.allbody {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0; }
+
+.divimage {
+  background-size: cover;
+  background-position: center center; }
+
+/*# sourceMappingURL=dzsparallaxer.css.map */

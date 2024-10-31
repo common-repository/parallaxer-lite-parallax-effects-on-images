@@ -1,0 +1,129 @@
+
+/*
+ * Author: Digital Zoom Studio
+ * Website: http://digitalzoomstudio.net/
+ * Portfolio: http://codecanyon.net/user/ZoomIt/portfolio
+ *
+ * Version: 1.30
+ *
+ */
+
+@mixin apply_transition($transition-property, $transition-duration, $transition-timing) {
+  transition-property: $transition-property;transition-duration: $transition-duration;-moz-transition-property:$transition-property;-moz-transition-duration: $transition-duration;-webkit-transition-property:$transition-property;-webkit-transition-duration: $transition-duration;-o-transition-property:$transition-property;-o-transition-duration: $transition-duration;-ms-transition-property:$transition-property;
+  -ms-transition-duration: $transition-duration;-ms-transition-timing-function:$transition-timing;
+
+  @if $transition-timing == ease-out-quart {
+    -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  } @else {
+    -webkit-transition-timing-function:$transition-timing;
+    -moz-transition-timing-function:$transition-timing;
+    -o-transition-timing-function:$transition-timing;
+    transition-timing-function: $transition-timing;
+  }
+}
+@mixin boxsizing() {
+  -moz-box-sizing:    border-box;   -webkit-box-sizing: border-box;    box-sizing:        border-box;
+}
+
+@-webkit-keyframes keyframes-rotate {
+  0% {transform: rotate(0deg);-webkit-transform: rotate(0deg);}
+  50% {transform: rotate(180deg);-webkit-transform: rotate(180deg);}
+  100% {transform: rotate(360deg);-webkit-transform: rotate(360deg);}
+}
+@keyframes keyframes-rotate {
+  0% {transform: rotate(0deg);-webkit-transform: rotate(0deg);}
+  50% {transform: rotate(180deg);-webkit-transform: rotate(180deg);}
+  100% {transform: rotate(360deg);-webkit-transform: rotate(360deg);}
+}
+
+
+
+
+.dzsparallaxer{
+  height: 300px;
+  overflow: hidden;
+  background-color: #1c1a17;
+  position: relative;
+
+  $transition-property: height;
+  $transition-duration: 0.3s;
+  $transition-timing: ease-out-quart;
+  @include apply_transition($transition-property, $transition-duration, $transition-timing);
+  .dzsparallaxer--target{
+    position: relative;
+
+//    $transition-property: all;
+//    $transition-duration: 0.3s;
+//    $transition-timing: ease-out;
+//    @include apply_transition($transition-property, $transition-duration, $transition-timing);
+  }
+  .dzsparallaxer--target.position-absolute{
+    position: absolute;
+    top:0; left:0;
+  }
+
+
+
+
+
+}
+
+
+.dzsparallaxer.wait-readyall.dzsprx-readyall{
+  .dzsparallaxer--target {
+    opacity: 1;
+  }
+
+}
+
+
+
+.dzsparallaxer.use-loading{
+  $transition-property: opacity,visibility;
+  $transition-duration: 0.7s;
+  $transition-timing: ease-out-quart;
+  .dzsparallaxer--target{
+    opacity: 0;
+    @include apply_transition($transition-property, $transition-duration, $transition-timing);
+  }
+  $transition-property: all;
+  $transition-duration: 0.3s;
+  $transition-timing: ease-out-quart;
+  .preloader-semicircles {
+    @include apply_transition($transition-property, $transition-duration, $transition-timing);
+  }
+}
+.dzsparallaxer.use-loading.loaded{
+  .dzsparallaxer--target{
+    opacity: 1;
+  }
+  .preloader-semicircles {
+    transform: translate3d(0,-50px,0);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.dzsparallaxer.allbody{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0; left:0;
+  z-index: 0;
+}
+
+.divimage{
+  background-size: cover;
+  background-position: center center;
+}
+
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .dzsparallaxer.simple-parallax{
+//    background-attachment: scroll;
+  }
+}
